@@ -1,0 +1,52 @@
+.pagination
+    display: inline-block
+    border: 1px solid $border-color
+    border-radius: $radius
+
+.linkWrapper
+    display: inline-block
+    vertical-align: middle
+    font-size: 0px
+
+.link
+    display: inline-block
+    vertical-align: middle
+    padding: 11px 6px
+    min-width: 27px
+    border-left: 1px solid $border-color
+    font-size: $normal-text
+    color: $black-color
+    text-align: center
+    transition: background-color .1s linear
+    cursor: pointer
+
+    &:hover
+        text-decoration: none
+        color: $black-color
+        background-color: #26c254
+        border-color: #26c254
+
+    &:active
+        background-color: #1d9841
+        border-color: #1d9841
+
+.linkPrev
+    border-left: none
+
+.linkNext, .linkPrev
+    width: 115px
+
+.linkActive
+    color: $white-color
+    background-color: $bg-green
+    border-color: $bg-green
+    cursor: default
+
+    &:hover
+        color: $white-color
+        background-color: $bg-green
+        border-color: $bg-green
+
+.paginationDisabled
+    pointer-events: none
+    opacity: 0.6

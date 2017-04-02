@@ -1,0 +1,71 @@
+.tabs
+    display: block
+    color: $black-color
+    font-size: 0
+    border-bottom: 1px solid $border-color
+
+.tab
+    position: relative
+    display: inline-block
+    padding: 0 25px
+    margin: 0 2px -1px -1px
+    vertical-align: bottom
+    border: 1px solid $border-color
+    border-radius: $radius $radius 0 0
+    background-color: $white-color
+    cursor: pointer
+
+    &:hover
+        .icon
+            color: $bg-green
+
+    &:first-child
+        margin-left: 0
+
+.text
+    display: inline-block
+    height: 38px
+    line-height: 38px
+    font-size: $normal-text
+    vertical-align: middle
+    color: #777
+
+.counter
+    display: inline-block
+    margin-left: 4px
+    min-width: 13px
+    vertical-align: middle
+    font-size: $small-text
+    color: #777
+
+.icon
+    display: inline-block
+    margin: 0 7px 3px 0
+    width: 23px
+    height: 23px
+    vertical-align: middle
+    color: $border-color
+    transition: color .2s linear
+
+.tabsDisabled
+    pointer-events: none
+    opacity: 0.6
+
+.tabActive
+    padding-top: 8px
+    border-bottom-color: $white-color
+    border-left: 1px solid $border-color
+    border-right: 1px solid $border-color
+    cursor: default
+
+    .icon
+        color: $bg-green
+
+    & + .tab, .tab + &
+        margin-left: -3px
+
+.counterMaxWidth
+    max-width: 30px
+    overflow: hidden
+    text-overflow: ellipsis
+    white-space: nowrap

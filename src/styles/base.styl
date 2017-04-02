@@ -1,0 +1,61 @@
+html, body
+    height: 100%
+
+body
+    font-family: Arial, Tahoma, Helvetica, "Liberation Sans", sans-serif
+    line-height: 1.4
+    color: $black-color
+    font-size: $normal-text
+    background: $white-color
+
+h1
+    font-size: $big-title
+    margin-bottom: 22px
+
+h2
+    font-size: $medium-title
+    margin-bottom: 10px
+
+h3
+    font-size: $small-title
+    margin-bottom: 5px
+
+b, strong, th
+    font-weight: bold
+
+a
+    color: $link-color
+    text-decoration: none
+    cursor: pointer
+    &:hover
+        color: $link-color
+        text-decoration: underline
+
+button::-moz-focus-inner
+    border: none
+
+input[type="reset"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner
+    border: none
+    padding: 0
+    margin: 0
+
+input:focus,
+textarea:focus,
+select:focus
+    outline: none
+
+th, td
+    vertical-align: middle
+
+:global
+
+    .page
+        width: $page-width-normal
+        &:after
+            clear: both;
+            display: table;
+            content: "";
+        margin-left: auto
+        margin-right: auto
