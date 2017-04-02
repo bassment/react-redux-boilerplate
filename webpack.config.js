@@ -3,6 +3,7 @@ const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 const LiveReloadPlugin = require('webpack-livereload-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const APP_ROOT = path.resolve(__dirname, 'src');
 
@@ -33,7 +34,7 @@ module.exports = ({ reload } = {}) => {
         },
         devtool: '#cheap-source-map',
         output: {
-            path: path.resolve(__dirname, 'build'),
+            path: path.join(__dirname, 'dist'),
             pathinfo: true,
             filename: '[name].js',
             publicPath: '/',
@@ -111,6 +112,11 @@ module.exports = ({ reload } = {}) => {
             },
         },
         plugins: [
+            new HtmlWebpackPlugin({
+                template: path.resolve(__dirname, 'src', 'index.tpl.html'),
+                inject: 'body',
+                filename: 'index.html',
+            }),
             new ExtractTextPlugin({
                 filename: 'css/[name].css',
                 allChunks: true,
