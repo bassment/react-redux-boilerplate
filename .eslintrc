@@ -1,6 +1,34 @@
 {
-  "extends": "@evo/eslint-config-uaprom",
+  "extends": [
+    "airbnb",
+    "plugin:import/errors"
+  ],
+  "parser": "babel-eslint",
   "rules": {
-    "no-alert": 0
+    "no-underscore-dangle": 0,
+    "import/extensions": "off",
+    "react/forbid-prop-types": "off",
+    "arrow-body-style": 0,
+    "react/prefer-stateless-function": 0,
+    "no-duplicate-imports": "off",
+    "import/no-duplicates": 2,
+    "import/prefer-default-export": 0,
+    "jsx-a11y/anchor-is-valid": 0,
+    "react/sort-comp": [
+      1,
+      {
+        "order": [
+          "type-annotations",
+          "static-methods",
+          "lifecycle",
+          "everything-else",
+          "render"
+        ]
+      }
+    ]
+  },
+  "env": {
+    "browser": true,
+    "node": true
   }
 }
